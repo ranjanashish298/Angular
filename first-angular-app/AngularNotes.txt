@@ -11,7 +11,7 @@
 
 #STRING INTERPOLATION & PROPERTY BINDING
 
-1.  String INTERPOLATION and Property Binding used for outputting Dynamic Data content in Angular. 
+1.  String INTERPOLATION and PROPERTY BINDING used for outputting Dynamic Data content in Angular. 
 2.  Do not forget '/assets/users/', the last slash to complete the image path. 
 3.  For example, <img [src]="someSrc"> binds the src property of the underlying HTMLImageElement 
     DOM object to the value stored in someSrc.
@@ -23,3 +23,8 @@
 
 1.  EventListener Methods can also be added. You define the methods in the class and use it's nameOfMethod()
     in the template of the component. 
+
+#MANAGING STATES & CHANGING DATA 
+
+1.  For eg. I want to now change the user everytime it is clicked. I simply updated the this.selectedUser to a
+    new random value. 

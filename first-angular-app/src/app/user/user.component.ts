@@ -19,6 +19,11 @@ export class UserComponent {
   }
 
   onSelectUser() {
-    console.log("Clicked!!")
-  }
+    
+    // 1.  When user clicks on the button, it should change the user 
+    // I change the current user to some other random user 
+    // Then I display this new random user. 
+    const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
+    this.selectedUser = DUMMY_USERS[randomIndex]; // Update the selected user
+    }
 }
