@@ -17,6 +17,6 @@
     DOM object to the value stored in someSrc.
 
 4.  One can also use 'getters' in the class itself for dynamic property binding with the 'this.' keyword.
-
+    The template then becomes much cleaner to use. 
 
 
