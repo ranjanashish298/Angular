@@ -19,4 +19,7 @@
 4.  One can also use 'getters' in the class itself for dynamic property binding with the 'this.' keyword.
     The template then becomes much cleaner to use. 
 
+#LISTEN TO USER INPUTS (LISTENING EVENTS WITH EVENT BINDING)
 
+1.  EventListener Methods can also be added. You define the methods in the class and use it's nameOfMethod()
+    in the template of the component. 
