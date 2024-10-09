@@ -1,0 +1,22 @@
+#BASICS OF ANGULAR
+
+1.  Every component can be designed in a seperate folder with the .ts, .html, .css file.
+    Each component should be taken as a class that we decorate (using the @Component keyword) 
+    that can be later exported to be used in different components. (Using child component for   
+    inside the parent component.)
+
+2.  To use for eg. 'SelectedUser', we needed to export this within the class in the .ts file 
+    and this can be later used for eg. in the .html file of that component or some other component. 
+    All of this can also be used in the end in the app.component.ts file! 
+
+#STRING INTERPOLATION & PROPERTY BINDING
+
+1.  String INTERPOLATION and Property Binding used for outputting Dynamic Data content in Angular. 
+2.  Do not forget '/assets/users/', the last slash to complete the image path. 
+3.  For example, <img [src]="someSrc"> binds the src property of the underlying HTMLImageElement 
+    DOM object to the value stored in someSrc.
+
+4.  One can also use 'getters' in the class itself for dynamic property binding with the 'this.' keyword.
+
+
+
