@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
@@ -14,10 +14,12 @@ export class UserComponent {
   //We made selectedUser now a signal that we invoke as a function at other places.  
   selectedUser = signal(DUMMY_USERS[randomIndex]);
 
-  //Here I make a 'getter' path for the image.
-  get imagePath() {
-    return 'assets/users/' + this.selectedUser().avatar;
-  }
+  //Now we use 'computed' that uses signal inside whenever any signal gets a change.
+  imagePath = computed( () => 'assets/users/' + this.selectedUser().avatar );
+  
+  // get imagePath() {
+  //   return 'assets/users/' + this.selectedUser().avatar;
+  // }
 
   onSelectUser() {
     

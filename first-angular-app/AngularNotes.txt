@@ -39,4 +39,5 @@
 
 2.  selectedUser is now a signal, so you can basically change it, read it (which you also do it by adding ().)
 
-3.  
+3.  computed() is also just like a signal, it is used to be efficient. Whenever we have a signal, we can change it 
+    inside the computed (  () => ... ). 
