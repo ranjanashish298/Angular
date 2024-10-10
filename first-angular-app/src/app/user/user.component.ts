@@ -15,7 +15,7 @@ export class UserComponent {
   selectedUser = signal(DUMMY_USERS[randomIndex]);
 
   //Now we use 'computed' that uses signal inside whenever any signal gets a change.
-  imagePath = computed( () => 'assets/users/' + this.selectedUser().avatar );
+  imagePath = computed( () => 'assets/users/' + this.selectedUser().avatar )
   
   // get imagePath() {
   //   return 'assets/users/' + this.selectedUser().avatar;
@@ -27,6 +27,6 @@ export class UserComponent {
     // I change the current user to some other random user 
     // Then I display this new random user. 
     const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-    this.selectedUser = signal(DUMMY_USERS[randomIndex]); // Update the selected user
+    this.selectedUser.set(DUMMY_USERS[randomIndex]); // Update the selected user
     }
 }
