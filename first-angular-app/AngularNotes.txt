@@ -28,3 +28,15 @@
 
 1.  For eg. I want to now change the user everytime it is clicked. I simply updated the this.selectedUser to a
     new random value. 
+
+#SIGNALS FOR STATE UPDATE (2nd METHOD)
+
+1.  Signals are trackable data containers. It is an object that stores a value. 
+    You remember how you wanted to update the this.selectedUser and was wondering if you had a set()
+    method such that you could dynamically change it? Exactly! This is what signal does. It stores a value 
+    and later you can change this value for dynamic output through this set method(). 
+    E.g: this.selectedUser.set(DUMMYUSERS[random_index]);
+
+2.  selectedUser is now a signal, so you can basically change it, read it (which you also do it by adding ().)
+
+3.  
