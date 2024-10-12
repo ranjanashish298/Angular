@@ -41,3 +41,20 @@
 
 3.  computed() is also just like a signal, it is used to be efficient. Whenever we have a signal, we can change it 
     inside the computed (  () => ... ). 
+
+
+#FLEXIBLE COMPONENTS & COMPONENTS_INPUT() METHOD
+
+1.  Think how if we now needed a list of 5 other users instead of one, we would re-use the component, isn't?
+    But if we just repeat the components, the data is gonna be same for all the users, it's not specific for every 
+    user. So we need more attributes that can be used along with the component-selector.
+    For eg. <app-user  ATTR1 />
+            <app-user  ATTR2 /> ...
+
+2.  To add such an ATTR (Avatar in our case, which is specific to each user) to your component for outside usage, we add
+    input() in our class file. 
+    For eg. @input avatar() -> this will make avatar to be set dynamically from outside. 
+
+3.  avatar!:string -> This tells TS that we know it's a string and it will be initialised later and it's gonna receive 
+    type string later.
+    In this way, now we re-used app-user component in a more flexible way. 
