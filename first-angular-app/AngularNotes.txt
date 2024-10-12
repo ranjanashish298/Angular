@@ -94,3 +94,19 @@
     
     Parent component: (CustomEvent) : parentFunc($event)
     Parent class: parentFunc(arg) -> ...
+
+4.  Angular Component Communication Models
+
+    Angular components generally communicate using the following models:
+    Parent to Child Communication: 
+    Data is passed down from parent to child components using @Input() properties. 
+    This is straightforward; the parent component binds data to the properties of the child component in the template.
+    Child to Parent Communication: 
+    Child components emit events that the parent components can listen to and react upon using @Output() properties and EventEmitter. 
+    This is how data can be "sent up" from child to parent.
+    Unrelated Components / Sibling Communication: 
+    For components that don't have a direct parent-child relationship (like UserComponent and TaskComponent), there are a few approaches:
+    Service-Based Communication: This is the preferred method for Angular applications where unrelated components need to share data. 
+    You would use a shared service equipped with observables or subjects to enable components to subscribe to data changes.
+    Parent as Intermediary: In simpler scenarios or when you don't need a service, a common parent component (like your AppComponent) 
+    can coordinate the interaction by capturing data emitted by one child and passing it to another child.
