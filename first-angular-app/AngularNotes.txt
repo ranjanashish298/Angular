@@ -58,3 +58,9 @@
 3.  avatar!:string -> This tells TS that we know it's a string and it will be initialised later and it's gonna receive 
     type string later.
     In this way, now we re-used app-user component in a more flexible way. 
+
+4.  NOCHMALS -> We just have one user component, right? It includes an avatar and a name. Great! Now we want to use this component
+    across our app such that we can display couple of users with the dynamic data. For this, we simply use @Input() in our
+    app-user class and now it can accept/bind in outside components (here for eg in normal app component.)
+    This makes the app-user template also very clean. 
+
