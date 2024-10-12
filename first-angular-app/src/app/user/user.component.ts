@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, computed, input } from '@angular/core';
 
 
 @Component({
@@ -10,12 +10,17 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
 
-  @Input({required:true}) avatar!: string;
-  @Input({required:true}) name!: string;
+  // @Input({required:true}) avatar!: string;
+  // @Input({required:true}) name!: string;
 
-  get imagePath() {
-    return '/assets/users/' + this.avatar;
-  }
+  avatar = input.required<string>();    /* or simply: avatar = input();      */
+  name = input.required<string>();
+
+  imagePath = computed( () => 'assets/users/' + this.avatar());   // avatar() is a signal input, hence with ()
+
+  // get imagePath() {
+  //   return '/assets/users/' + this.avatar;
+  // }
 
   onSelectUser() {
     

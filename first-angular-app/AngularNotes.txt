@@ -64,3 +64,12 @@
     app-user class and now it can accept/bind in outside components (here for eg in normal app component.)
     This makes the app-user template also very clean. 
 
+
+#SETTING INPUTS() AS SIGNAL_INPUTS
+
+1.  Signals as we learnt helped us keep in track the changes in UI. Doesn't it sound good if the inputs we passed earlier 
+    could somehow be connected with the Signal property we have in Angular? And this is why now the syntax reduces to simply:
+
+    avatar = input() ; avatar = input<string>() ; avatar = input.required<string>();
+
+2.  These input signals are however just 'read' mode, i.e, they cannot be changed for eg. previously like the .set() method. 
