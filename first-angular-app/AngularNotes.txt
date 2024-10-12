@@ -73,3 +73,24 @@
     avatar = input() ; avatar = input<string>() ; avatar = input.required<string>();
 
 2.  These input signals are however just 'read' mode, i.e, they cannot be changed for eg. previously like the .set() method. 
+
+
+#OUTPUTTING RESULTS IN ANGULAR
+
+1.  We have the list of different users and now we want that when we click a user, the eventListener method gets invoked
+    and we have the user tasks as a sepearte component in the <app-root> component. We don't want to touch the app-user 
+    component for this, since that is soleley responsible for the div button that we have there. 
+
+2.  "If a click event is detected on the button in UserComponent, the UserComponent's method is called, which emits a select event. 
+    In the parent component (AppComponent) that select event is detected, and the AppComponent's method is called.
+    "
+
+3.  NOCHMALS:
+    Custom Event create in child component -> (Use this to emit to parent component) -> Catch name of the custom event in the Parent Component ->
+    the same 'named' method in the parent component now console logs the emitted information using the $event keyword. 
+    Child component: @Output CustomEvent
+    Child component: emit using newEventEmitter: CustomEvent.emit();
+    Now catch info emitted from child to parent using the $event
+    
+    Parent component: (CustomEvent) : parentFunc($event)
+    Parent class: parentFunc(arg) -> ...
