@@ -16,8 +16,4 @@ import { UserComponent } from "../user/user.component";
 
     @Input({required:true}) name!:string;
 
-    onSelectUser(name:string) {
-        console.log("User name is: " + name);
-      }
-
   }

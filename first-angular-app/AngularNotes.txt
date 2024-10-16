@@ -110,3 +110,9 @@
     You would use a shared service equipped with observables or subjects to enable components to subscribe to data changes.
     Parent as Intermediary: In simpler scenarios or when you don't need a service, a common parent component (like your AppComponent) 
     can coordinate the interaction by capturing data emitted by one child and passing it to another child.
+
+#  Outputting List Elements
+
+1.  Until now, we manually control the list elements in our app.component.html. 
+    But what if there are 1000's of users in our data that we want to iterate over? We need something to dynamically control this.
+    @for (iterator in something) {...} comes into play! 
