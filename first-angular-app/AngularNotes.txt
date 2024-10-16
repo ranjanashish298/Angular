@@ -116,3 +116,5 @@
 1.  Until now, we manually control the list elements in our app.component.html. 
     But what if there are 1000's of users in our data that we want to iterate over? We need something to dynamically control this.
     @for (iterator in something) {...} comes into play! 
+
+2.  Similarly, there are @if{..} and @else{...} blocks. 
