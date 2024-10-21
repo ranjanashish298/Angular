@@ -1,7 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
+import { subscriptionLogsToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
+
+interface User {
+  id: string,
+  avatar : string,
+  name: string
+}
 
 @Component({
   selector: 'app-user',
@@ -9,22 +16,22 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   imports: [],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
-})
+}) 
 export class UserComponent {
 
-  @Input() avatar!: string;
-  @Input() name!: string;
+  @Input({required:true})  user!: User;
 
+  @Output() select  = new EventEmitter();
 
   selectedUser = DUMMY_USERS[randomIndex];
 
   //Here I make a 'getter' path for the image.
   get imagePath() {
-    return 'assets/users/' + this.avatar;
+    return 'assets/users/' + this.user.avatar;
   }
 
   onSelectUser() {
-    console.log("Clicked!!")
+    this.select.emit(this.user.id);
   }
 }
  
