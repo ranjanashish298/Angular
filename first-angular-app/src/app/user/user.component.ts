@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
-import { subscriptionLogsToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
@@ -20,6 +19,7 @@ interface User {
 export class UserComponent {
 
   @Input({required:true})  user!: User;
+  @Input({required:true}) selected!: boolean;
 
   @Output() select  = new EventEmitter();
 
